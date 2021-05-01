@@ -7,21 +7,29 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class InfoRemessa {
-	
+
+	@ApiModelProperty(value = "Código do Arquivo")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@ApiModelProperty(value = "Nome do Arquivo")
 	private String nomeArquivo;
 	
+	@ApiModelProperty(value = "Tipo do Arquivo")
 	private String tipoArquivo;
 	
+	@ApiModelProperty(value = "Data do Arquivo")
 	private Date data;
 	
+	@ApiModelProperty(value = "Quantidade de Linhas")
 	private int quantLinhas;
 	
+	@ApiModelProperty(value = "Valor Total")
 	private double valorTotal;
 
 	public Long getId() {
